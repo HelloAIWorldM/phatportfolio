@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, ExternalLink, Mail, Phone, MapPin, Copy, Check } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, ExternalLink, Mail, Phone, MapPin, Copy, Check, FileDown } from 'lucide-react';
 import { cvData, techItems } from '../data/cvData';
 import { renderTechIcon } from './TechIcons';
 
@@ -16,6 +16,17 @@ export const ContentDrawer: React.FC<ContentDrawerProps> = ({
 }) => {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [techCategory, setTechCategory] = useState<'all' | 'software' | 'language' | 'ai' | 'framework'>('all');
+
+  // Close on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
 
   if (!activeSection) return null;
 
@@ -88,6 +99,18 @@ export const ContentDrawer: React.FC<ContentDrawerProps> = ({
                 <p className="text-sm leading-relaxed text-cream/80 whitespace-pre-line text-justify">
                   {cvData.bio}
                 </p>
+
+                {/* Download CV Action */}
+                <div className="pt-2">
+                  <a
+                    href="/CV_TruongTanPhat.pdf"
+                    download="CV_TruongTanPhat.pdf"
+                    className="inline-flex items-center gap-2 py-2 px-3.5 rounded-lg bg-cream/10 hover:bg-cream/20 text-cream border border-cream/20 text-xs font-medium tracking-wide transition-colors"
+                  >
+                    <FileDown size={15} />
+                    <span>Tải CV chính thức (PDF)</span>
+                  </a>
+                </div>
               </div>
 
               {/* Education */}
@@ -388,14 +411,23 @@ export const ContentDrawer: React.FC<ContentDrawerProps> = ({
                 </div>
               </div>
 
-              {/* Direct Mail Action Button */}
-              <div className="pt-2">
+              {/* Direct Mail & Download CV Action Buttons */}
+              <div className="pt-2 space-y-2">
                 <a
                   href={`mailto:${cvData.email}?subject=Trao%20đổi%20cơ%20hội%20Software%20Engineer%20-%20Trương%20Tấn%20Phát`}
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-cream text-[#141414] font-medium text-sm hover:opacity-90 transition-opacity"
                 >
                   <Mail size={16} />
                   <span>Gửi thư qua Email ngay</span>
+                </a>
+
+                <a
+                  href="/CV_TruongTanPhat.pdf"
+                  download="CV_TruongTanPhat.pdf"
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#222222] border border-cream/20 text-cream font-medium text-sm hover:bg-[#2a2a2a] transition-colors"
+                >
+                  <FileDown size={16} />
+                  <span>Tải bản PDF CV đầy đủ</span>
                 </a>
               </div>
             </div>
