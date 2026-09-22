@@ -191,25 +191,45 @@ export const ContentDrawer: React.FC<ContentDrawerProps> = ({
                     key={idx}
                     className="p-5 rounded-xl bg-[#1a1a1a] border border-cream/15 hover:border-cream/40 transition-colors duration-300 space-y-3"
                   >
-                    <div className="flex items-start justify-between">
+                    <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h4 className="text-base font-semibold text-cream">
-                          {proj.name}
-                        </h4>
+                        <div className="flex items-center gap-2 flex-wrap mb-0.5">
+                          <h4 className="text-base font-semibold text-cream">
+                            {proj.name}
+                          </h4>
+                          {proj.badge && (
+                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-cream/15 text-cream border border-cream/30 font-medium font-mono">
+                              {proj.badge}
+                            </span>
+                          )}
+                        </div>
                         <span className="text-xs text-cream/60">
                           {proj.subtitle}
                         </span>
                       </div>
 
-                      <a
-                        href={proj.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs text-cream/70 hover:text-cream bg-cream/10 hover:bg-cream/20 px-2.5 py-1 rounded transition-colors"
-                      >
-                        <span>GitHub</span>
-                        <ExternalLink size={12} />
-                      </a>
+                      <div className="flex items-center gap-1.5 flex-shrink-0">
+                        {proj.liveDemo && (
+                          <a
+                            href={proj.liveDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 text-xs text-cream bg-cream/20 hover:bg-cream/30 border border-cream/30 px-2.5 py-1 rounded transition-colors font-medium"
+                          >
+                            <span>Live Demo</span>
+                            <ExternalLink size={12} />
+                          </a>
+                        )}
+                        <a
+                          href={proj.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-xs text-cream/70 hover:text-cream bg-cream/10 hover:bg-cream/20 px-2.5 py-1 rounded transition-colors"
+                        >
+                          <span>GitHub</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      </div>
                     </div>
 
                     <p className="text-xs text-cream/80 leading-relaxed">

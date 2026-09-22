@@ -49,6 +49,15 @@ export const cvData = {
   ],
   projects: [
     {
+      name: "Movie Chat AI — Đồ Án Tốt Nghiệp",
+      subtitle: "Trợ Lý Khám Phá Điện Ảnh Thông Minh (Dual-Engine AI)",
+      description: "Đồ án thực tập tốt nghiệp chuyên ngành Khoa học Dữ liệu. Xây dựng trợ lý AI tư vấn điện ảnh thời gian thực ứng dụng cơ chế Dual-Engine AI (Google Gemini & Groq fallback), tối ưu hóa hiệu năng 5 tầng (HTTP Connection Pooling, TMDB Batching, In-Memory Caching 0.001ms, CSS Virtualization) và giao diện đàm thoại Chainlit.",
+      github: "https://github.com/HelloAIWorldM/DoAnThucTapTotNghiep",
+      liveDemo: "https://moviechatai.onrender.com",
+      badge: "Graduation Capstone",
+      tags: ["Python", "Google Gemini", "Groq", "Chainlit", "Docker", "TMDB API", "Connection Pooling"],
+    },
+    {
       name: "HelloAIWorldM / -n",
       subtitle: "Dự án Khoa học dữ liệu & Xử lý số liệu",
       description: "Kho lưu trữ mã nguồn cho các bài toán phân tích dữ liệu, thuật toán máy học và thử nghiệm mô hình trí tuệ nhân tạo.",
