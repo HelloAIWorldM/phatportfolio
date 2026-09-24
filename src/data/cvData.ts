@@ -58,6 +58,14 @@ export const cvData = {
       tags: ["Python", "Google Gemini", "Groq", "Chainlit", "Docker", "TMDB API", "Connection Pooling"],
     },
     {
+      name: "Personnel NTH — Quản Lý Nhân Sự Raid",
+      subtitle: "Raid Roster & Party Organizer — Web App Phân Chia Đội Hình Bang Hội",
+      description: "Ứng dụng web trực quan hỗ trợ trưởng nhóm (Raid Leader) và bang hội lập danh sách, phân chia đội hình đi Raid 12 người, tự động cân bằng vai trò (Tank / Healer / DPS), tùy chỉnh màu sắc 11 môn phái, đồng bộ Google Sheets 2 chiều, chế độ Dark Mode toàn diện và xuất ảnh HD / file Excel định dạng chuẩn.",
+      github: "https://github.com/HelloAIWorldM/Personnel_NTH",
+      badge: "Featured Web App",
+      tags: ["React 19", "TypeScript", "Tailwind CSS v4", "Firebase Auth", "Google Sheets API", "html2canvas", "Vite"],
+    },
+    {
       name: "HelloAIWorldM / -n",
       subtitle: "Dự án Khoa học dữ liệu & Xử lý số liệu",
       description: "Kho lưu trữ mã nguồn cho các bài toán phân tích dữ liệu, thuật toán máy học và thử nghiệm mô hình trí tuệ nhân tạo.",

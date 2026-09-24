@@ -11,9 +11,9 @@ export const Portrait: React.FC = () => {
         loading="eager"
       />
 
-      {/* Front portrait cutout overlay of Trương Tấn Phát (Full arms, ultra-sharp), above marquee, z-20 */}
+      {/* Front portrait cutout overlay of Trương Tấn Phát (Full arms, gentle smile, ultra-sharp), above marquee, z-20 */}
       <img
-        src="/phat_full_arms_4k.png"
+        src="/phat_full_arms_4k.png?v=3"
         alt="Trương Tấn Phát"
         className="absolute inset-0 h-full w-full object-cover z-20 pointer-events-none anim-rise-in select-none"
         loading="eager"
