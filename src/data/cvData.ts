@@ -15,12 +15,12 @@ export const cvData = {
   phone: "0934766051",
   email: "ttan56781@gmail.com",
   location: "Hóc Môn, TP Hồ Chí Minh",
-  bio: "Là sinh viên ngành Khoa Học Dữ Liệu tại Đại học Nguyễn Tất Thành, đã hoàn thành chương trình học và đang chờ bằng tốt nghiệp. Tôi tìm kiếm cơ hội làm việc trong môi trường chuyên nghiệp trong vai trò Software Engineer & Data Engineer, nơi có thể phát huy tối đa tư duy thuật toán, kỹ năng xử lý dữ liệu và xây dựng giải pháp AI thực tế.",
+  bio: "Software Engineer & Data Engineer với nền tảng vững chắc về Khoa học Dữ liệu, tư duy thuật toán và lập trình hệ thống. Chuyên sâu trong việc phát triển các ứng dụng web hiệu năng cao, xây dựng pipeline dữ liệu và tích hợp các giải pháp AI thực tế vào sản phẩm doanh nghiệp.",
   education: {
     school: "Đại học Nguyễn Tất Thành (NTTU)",
     degree: "Chuyên ngành Khoa học Dữ liệu",
     period: "09/2022 — 2026",
-    status: "Sinh viên năm cuối, đã hoàn thành chương trình học và chờ nhận bằng tốt nghiệp",
+    status: "Cử nhân Khoa học Dữ liệu (Đã hoàn thành toàn bộ chương trình đào tạo)",
   },
   interests: ["Nghe nhạc", "Đọc sách công nghệ", "Xem phim khoa học viễn tưởng"],
   experience: [
